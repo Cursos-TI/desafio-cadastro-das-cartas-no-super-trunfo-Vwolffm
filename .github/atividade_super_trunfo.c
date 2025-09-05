@@ -1,0 +1,121 @@
+#include <stdio.h>
+
+int main () {
+    //Definição dos atributos da Primeira carta 
+    char letra; 
+    char codigoCarta[4];
+    char cidade[10];
+    int populacao;
+    float area;
+    float pib;
+    int pontoTurismo;
+
+
+    //Definição dos atributos da Segunda carta
+    char letra2; 
+    char codigoCarta2[4];
+    char cidade2[10];
+    int populacao2;
+    float area2;
+    float pib2;
+    int pontoTurismo2;
+
+    //Início do cógido
+    printf("Digite uma letra entre A e H: "); //primeira carta
+    scanf(" %c", &letra);
+
+    printf("Digite o código da carta: ");
+    scanf("%s", &codigoCarta);
+
+    printf("Digite o nome da cidade: ");
+    scanf("%s", &cidade);
+
+    printf("Digite a população: ");
+    scanf("%d", &populacao);
+    
+    printf("Digite a área da cidade: ");
+    scanf("%f", &area);
+
+    printf("Digite o PIB (Produto Interno Bruto): ");
+    scanf("%f", &pib);
+
+    printf("Digite a quantidade de pontos turísticos: ");
+    scanf("%d", &pontoTurismo);
+
+
+    float densidade = (float) populacao / area;
+    float pibCapita = (float) populacao / pib;
+
+    //Pular linhas para organizar melhor a apresentação no terminal, única forma que consegui pensar para pular as linhas
+        printf("\n");
+        printf("\n");
+        printf("\n");
+
+    //Apresentação dos resultados digitados para a primeira carta
+    printf("Carta 1\n" );
+    printf("Estado: %c\n", letra);
+    printf("Código: %s\n", codigoCarta);
+    printf("Nome da Cidade: %s\n", cidade);
+    printf("População: %d\n", populacao);
+    printf("Área: %.2f Km²\n", area);
+    printf("PIB: %.2f Milhões de Reais\n", pib);
+    printf("Número de Pontos Turísticos: %d\n", pontoTurismo);
+    printf("a densidade populacional é: %.2f hab/Km²\n", densidade);
+    printf("o PIB per Capita é: %.2f reais\n", pibCapita);
+
+    //Pular linhas para organizar melhor a apresentação no terminal
+        printf("\n");
+        printf("\n");
+        printf("\n");
+    printf("Muito bem, agora é hora de preencher a segunda carta\n"); //indicação do início da segunda carta
+        printf("\n");
+        printf("\n");
+        printf("\n");
+
+    printf("Digite uma letra entre A e H, diferente da primeira: "); //segunda carta
+    scanf(" %c", &letra2);
+
+    printf("Digite o código da carta: ");
+    scanf("%s", &codigoCarta2);
+
+    printf("Digite o nome da cidade: ");
+    scanf("%s", &cidade2);
+
+    printf("Digite a população: ");
+    scanf("%i", &populacao2);
+    
+    printf("Digite a área da cidade: ");
+    scanf("%f", &area2);
+
+    printf("Digite o PIB (Produto Interno Bruto): ");
+    scanf("%f", &pib2);
+
+    printf("Digite a quantidade de pontos turísticos: ");
+    scanf("%d", &pontoTurismo2);
+
+
+    float densidade2 = populacao2 / area2;
+    float pibCapita2 = (float) populacao2 / pib2;
+
+
+
+    //Pular linhas para organizar melhor a apresentação no terminal
+        printf("\n");
+        printf("\n");
+        printf("\n");
+
+    //Apresentação dos resultados digitados para a segunda carta
+    printf("Carta 2\n" );
+    printf("Estado: %c\n", letra2);
+    printf("Código: %s\n", codigoCarta2);
+    printf("Nome da Cidade: %s\n", cidade2);
+    printf("População: %i\n", populacao2);
+    printf("Área: %.2f Km²\n", area2);
+    printf("PIB: %.2f Milhões de Reais\n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", pontoTurismo2);
+    printf("a densidade populacional é: %.2f hab/Km²\n", densidade2);
+    printf("o PIB per Capita é: %.2f reais\n", pibCapita2);
+
+
+    return 0;
+}
